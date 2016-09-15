@@ -1,0 +1,26 @@
+<h1>Jobs post in $city.getName()</h1>
+#if($jobs)
+  <ul>
+    #foreach($job in $jobs)
+      <li><a href="/jobs/$job.getId()">$job.getTitle()</a></li>
+    #end
+  </ul>
+#else
+  <h3>Add some jobs</h3>
+#end
+
+<form class="form-group" action="/cities/$city.getId()" method="post">
+  <div class="form-group">
+    <label for="title">Add job title.</label>
+    <input id="title"type="text" name="title" value="">
+  </div>
+  <div class="form-group">
+    <label for="discription">Add discription</label>
+    <input type="text" id="discription" name="discription" value="">
+  </div>
+  <div class="form-group">
+    <label for="contact">Add contact</label>
+    <input type="text" id="contact" name="contact" value="">
+  </div>
+  <button type="submit" class="btn" name="button">Add Job</button>
+</form>

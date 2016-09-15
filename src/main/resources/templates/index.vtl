@@ -1,11 +1,11 @@
-<h1>Our Job Board</h1>
-<ul>
+<h1 class="header">Our Job Board</h1>
+<ul class="jumbotron">
   #foreach($city in $cities)
     <li><a href="/cities/$city.getId()">$city.getName()</a></li>
   #end
 </ul>
 
-<form action="/" method="post">
+<form class="jumbotron" action="/" method="post">
   <div class="form-group">
     <label for="city">Enter City name: </label>
     <input type="text" name="city" id="city" class="form-control">
